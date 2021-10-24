@@ -11,6 +11,9 @@ Shader::Shader(const std::string& filepath)
 	: m_FilePath(filepath), m_RendererID(0)
 {
     ShaderProgramSource source = ParseShader(filepath);
+    //std::cout << source.VertexSource << std::endl;
+    //std::cout << "\n ------------ \n" << std::endl;
+    //std::cout << source.FragmentSource << std::endl;
     m_RendererID = CreateShader(source.VertexSource, source.FragmentSource);
 }
 
@@ -107,7 +110,17 @@ void Shader::SetUniforms4f(const std::string& name, float v0, float v1, float v2
     GLCall(glUniform4f(GetUniformLocation(name), v0, v1, v2, v3));
 }
 
-unsigned int Shader::GetUniformLocation(const std::string& name)
+void Shader::SetUniforms1f(const std::string& name, float value)
+{
+    GLCall(glUniform1f(GetUniformLocation(name), value));
+}
+
+void Shader::SetUniforms1i(const std::string& name, int value)
+{
+    GLCall(glUniform1i(GetUniformLocation(name), value));
+}
+
+int Shader::GetUniformLocation(const std::string& name)
 {
     if (m_UniformLocationCache.find(name) != m_UniformLocationCache.end())
         return m_UniformLocationCache[name];
