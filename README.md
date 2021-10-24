@@ -21,3 +21,5 @@ Codes are divided to episodes. There is a branch for each episode for tracking:
 6. buffer-layout-abstraction
 
 7. shader-abstraction
+
+8. basic-renderer
