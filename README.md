@@ -17,3 +17,5 @@ Codes are divided to episodes. There is a branch for each episode for tracking:
 4. vertex-arrays
 
 5. abstracting-classes
+
+6. buffer-layout-abstraction
