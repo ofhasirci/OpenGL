@@ -23,3 +23,5 @@ Codes are divided to episodes. There is a branch for each episode for tracking:
 7. shader-abstraction
 
 8. basic-renderer
+
+9. textures
