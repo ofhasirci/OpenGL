@@ -1,5 +1,19 @@
 # OpenGL Series
 
 This repo represents my OpenGL learning series.
+
 I will try to push codes incrementally.
+
 It contains my learning sources as well.
+
+Codes are divided to episodes. There is a branch for each episode for tracking:
+
+1. index-buffer-example
+
+2. gl-error-handling
+
+3. uniform
+
+4. vertex-arrays
+
+5. abstracting-classes
