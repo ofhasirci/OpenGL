@@ -61,8 +61,19 @@ int main(void)
             2, 3, 0
         };
 
-        GLCall(glEnable(GL_BLEND));
+        // Blending
+        // Blend 2 overlaping pixels' color
+        GLCall(glEnable(GL_BLEND)); // enable it
         GLCall(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA));
+        // (SourceValue, DestinationValue) -> default values (1, 0)
+        // In our case GL_SRC_ALPHA -> 0, GL_ONE_MINUS_SRC_ALPHA -> (1 - 0)
+        // glBlendEquation(mode) -> how to combine src and dest colors
+        // Default mode value is GL_FUNC_ADD
+        // So the result in our case:
+        // R = (rsrc * 0) + (rdest (1 - 0)) 
+        // G = (gsrc * 0) + (gdest (1 - 0)) 
+        // B = (gsrc * 0) + (bdest (1 - 0)) 
+        // A = (asrc * 0) + (adest (1 - 0)) 
 
         VertexArray va;
         VertexBuffer vb(positions, 4 * 4 * sizeof(float));
