@@ -30,7 +30,7 @@ int main(void)
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(960, 540, "Hello World", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -52,10 +52,10 @@ int main(void)
     
     {
         float positions[] = {
-            -0.5f, -0.5f, 0.0f, 0.0f, // 0
-             0.5f, -0.5f, 1.0f, 0.0f, // 1
-             0.5f,  0.5f, 1.0f, 1.0f, // 2
-            -0.5f,  0.5f, 0.0f, 1.0f // 3
+            100.0f, 100.0f, 0.0f, 0.0f, // 0
+            200.0f, 100.0f, 1.0f, 0.0f, // 1
+            200.0f, 200.0f, 1.0f, 1.0f, // 2
+            100.0f, 200.0f, 0.0f, 1.0f  // 3
         };
 
         unsigned int indicies[] = {
@@ -86,7 +86,7 @@ int main(void)
 
         IndexBuffer ib(indicies, 6);
 
-        glm::mat4 proj = glm::ortho(-2.0f, 2.0f, -1.5f, 1.5f, -1.0f, 1.0f);
+        glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
 
         Shader shader("res/shaders/Basic.shader");
         shader.Bind();
