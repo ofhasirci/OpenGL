@@ -35,3 +35,5 @@ Codes are divided to episodes. There is a branch for each episode for tracking:
 13. model-view-projection
 
 14. imgui
+
+15. render-multiple-object
