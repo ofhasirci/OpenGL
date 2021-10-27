@@ -39,3 +39,5 @@ Codes are divided to episodes. There is a branch for each episode for tracking:
 15. render-multiple-object
 
 16. creating-tests
+
+17. texture-test
