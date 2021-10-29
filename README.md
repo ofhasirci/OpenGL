@@ -41,3 +41,5 @@ Codes are divided to episodes. There is a branch for each episode for tracking:
 16. creating-tests
 
 17. texture-test
+
+18. batch-vertex-test
