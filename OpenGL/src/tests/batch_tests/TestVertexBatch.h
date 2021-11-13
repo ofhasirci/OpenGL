@@ -28,7 +28,7 @@ namespace test {
 		std::unique_ptr<Texture> m_texture1;
 		std::unique_ptr<Texture> m_texture2;
 
-		float m_QuadPosition[2] = { -50.0f, -50.0f };
+		float m_QuadPosition[2] = { 600.0f, 120.0f };
 	};
 
 }
